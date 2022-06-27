@@ -1,0 +1,204 @@
+body {
+    background: $very-dark-desaturated-blue;
+    font-size: 1em;
+    font-weight: 700;
+    font-family: 'League Spartan', sans-serif;
+    min-height: 100vh;
+    transition: $theme-transition;
+}
+main {
+    min-height: 100vh;
+    width: 100%;
+}
+#calculator {
+    padding-top: 60px;
+    margin: 0 auto 20px;
+    width: 540px;
+    @include respond(medium) {
+        padding-top: 5px;
+        width: 325px;
+    }
+}
+#calculator > div {
+    margin: 20px 0;
+
+    @include respond(medium) {
+        margin: 20px 0 30px;
+    }
+    &:nth-child(1n+2) {
+        margin: 30px 0;
+
+        @include respond(medium) {
+            margin: 25px 0;
+        }
+    }
+}
+#calculator .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: $white;
+}
+#calculator .header p {
+    font-size: 2em;
+}
+#calculator .header .theme {
+    display: flex;
+    position: relative;
+    font-size: 1.3em;
+}
+#calculator .header .theme label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.6em;
+    margin: 2px;
+    cursor: pointer;
+    z-index: 5;
+}
+#calculator .header .theme label input {
+    height: 20px;
+    width: 20px;
+    margin-top: 5px;
+    pointer-events: none;
+    opacity: 0;
+}
+#calculator .header .theme .toggle p {
+    position: absolute;
+    font-size: 0.5em;
+    transform: translateX(-60px);
+    text-transform: uppercase;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+}
+.toggle {
+    background: $very-dark-desaturated-blue-2;
+    position: absolute;
+    width: 70px;
+    height: 26px;
+    bottom: 0;
+    right: 0;
+    border-radius: 50px;
+    opacity: 1;
+    transition: $theme-transition;
+    z-index: 1;
+}
+.toggle-btn {
+    background: $red;
+    height: 17px;
+    width: 17px;
+    margin: 5px;
+    border-radius: 50px;
+    transition: $theme-transition;
+}
+#calculator .header .theme label input[id='2']:checked + .toggle .toggle-btn {
+    margin: 5px auto;
+}
+.output {
+    height: 130px;
+    width: 100%;
+    padding: 0 25px;
+    line-height: 130px;
+    text-align: right;
+    border-radius: 10px;
+    background: $very-dark-desaturated-blue-3;
+    transition: $theme-transition;
+
+    @include respond(medium) {
+        height: 90px;
+        line-height: 90px;
+    }
+}
+.output p {
+    color: $white;
+    font-size: 3.5em;
+
+    @include respond(medium) {
+        font-size: 2.5em;
+    }
+}
+.calculator-grid {
+    display: grid;
+    grid-template-rows: repeat(5, 60px);
+    grid-template-columns: repeat(4, 100px);
+    row-gap: 26px;
+    column-gap: 26px;
+    height: 485px;
+    width: 540px;
+    margin-top: 30px;
+    padding: 40px 30px;
+    border-radius: 10px;
+    background: $very-dark-desaturated-blue-2;
+    transition: $theme-transition;
+    @include respond(medium) {
+        height: 420px;
+        width: 325px;
+        grid-template-columns: repeat(4,60px);
+        column-gap: 13px;
+        row-gap: 18px;
+        padding: 23px;
+    }
+}
+.calculator-grid .btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    background: $light-grayish-orange;
+    color: $very-dark-grayish-blue;
+    box-shadow: 0 4px $grayish-orange-shadow;
+    cursor: pointer;
+    transition: $theme-transition;
+
+    @include respond(medium) {
+        border-radius: 5px;
+    }
+
+    &:hover {
+        background: $light-grayish-orange-hover;
+    }
+}
+.calculator-grid .btn p {
+    margin-top: 5px;
+}
+.calculator-grid .btn p.number {
+    font-size: 2.5em;
+
+    @include respond(medium) {
+        font-size: 2em;
+    }
+}
+
+.calculator-grid .btn.blue-btn p,
+.calculator-grid .btn.red-btn p {
+    color: #fff;
+    font-size: 1.8em;
+
+    @include respond(medium) {
+        font-size: 1.2em;
+    }
+}
+.calculator-grid .btn.blue-btn {
+    background: $desaturated-dark-blue;
+    box-shadow: 0 3px $desaturated-dark-blue-shadow;
+
+    &:hover {
+        background: $desaturated-dark-blue-hover;
+    }
+}
+.calculator-grid .btn.red-btn {
+    background: $red;
+    box-shadow: 0 3px $dark-red-shadow;
+
+    &:hover {
+        background: $red-hover;
+    }
+}
+.calculator-grid .colspan-1 {
+    grid-column: 1/3;
+}
+.calculator-grid .colspan-2 {
+    grid-column: 3/5;
+}

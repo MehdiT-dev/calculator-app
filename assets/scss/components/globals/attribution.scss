@@ -1,0 +1,36 @@
+.attribution {
+    font-size: 12px;
+    text-align: center;
+    color: $light-grayish-orange;
+    
+    a {
+        color: $red;
+        text-decoration: none;
+        position: relative;
+        margin: 3px;
+        
+        &::before, &::after {
+            content: '';
+            background: $very-dark-blue;
+            position: absolute;
+            display: block;
+            height: 9px;
+            width: 0;
+            transition: all .5s ease;
+            z-index: -1;
+        }
+        &::before {
+            top: 0;
+            left: 0;
+            transform: translate(-3px,-3px);
+        }
+        &::after {
+            bottom: 0;
+            right: 0;
+            transform: translate(3px,3px);
+        }
+        &:hover::before, &:hover::after {
+            width: calc(100% + 6px);
+        }
+    }
+}

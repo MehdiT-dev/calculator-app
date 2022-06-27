@@ -1,0 +1,114 @@
+.light {
+    background: $light-gray;
+    p, label {
+        color: $very-dark-grayish-yellow;
+    }
+    #calculator {
+        .header .theme .toggle {
+            background: $grayish-red;
+            .toggle-btn {
+                background: $orange;
+            }
+        }
+        .output {
+            background: $very-light-gray;
+        }
+        .calculator-grid {
+            background: $grayish-red;
+            .btn {
+                background: $light-grayish-yellow;
+                box-shadow: 0 3px $dark-grayish-orange-shadow;
+
+                &:hover {
+                    background: $light-grayish-yellow-hover;
+                }
+                &.blue-btn {
+                    background: $dark-moderate-cyan;
+                    box-shadow: 0 3px $very-dark-cyan-shadow;
+
+                    &:hover {
+                        background: $dark-moderate-cyan-hover;
+                    }
+                    p {
+                        color: $white;
+                    }
+                }
+                &.red-btn {
+                    background: $orange;
+                    box-shadow: 0 3px $dark-orange-shadow;
+
+                    &:hover {
+                        background: $orange-hover;
+                    }
+                    p {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+    .attribution a {
+        color: $orange;
+
+        &::before, &::after {
+            background: $white;
+        }
+    }
+}
+.purple {
+    background: $very-dark-violet;
+    p, label {
+        color: $light-yellow;
+    }
+    #calculator {
+        .toggle {
+            background: $very-dark-violet-2;
+            .toggle-btn {
+                background: $pure-cyan;
+            }
+        }
+        .output {
+            background: $very-dark-violet-2;
+        }
+        .calculator-grid {
+            background: $very-dark-violet-2;
+            .btn {
+                background: $very-dark-violet-3;
+                box-shadow: 0 3px $dark-magenta-shadow;
+
+                &:hover {
+                    background: $very-dark-violet-3-hover;
+                }
+                &.blue-btn {
+                    background: $dark-violet;
+                    box-shadow: 0 3px $vivid-magenta-shadow;
+
+                    &:hover {
+                        background: $dark-violet-hover;
+                    }
+                    p {
+                        color: $white;
+                    }
+                }
+                &.red-btn {
+                    background: $pure-cyan;
+                    box-shadow: 0 3px $soft-cyan-shadow;
+
+                    &:hover {
+                        background: $pure-cyan-hover;
+                    }
+                    p {
+                        color: $very-dark-blue;
+                    }
+                }
+            }
+        }
+    }
+    .attribution a {
+        color: $pure-cyan;
+
+        &::before, &::after {
+            background: $dark-violet;
+        }
+    }
+}
