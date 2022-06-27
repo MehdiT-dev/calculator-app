@@ -57,4 +57,4 @@ $very-dark-blue: hsl(198, 20%, 13%);
 $white: hsl(0, 0, 100%);
 
 // TRANSITION
-$theme-transition: all .4s ease;
+$theme-transition: background-color .4s , color .4s;

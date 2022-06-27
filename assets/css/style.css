@@ -11,7 +11,7 @@ body {
   font-weight: 700;
   font-family: "League Spartan", sans-serif;
   min-height: 100vh;
-  transition: all 0.4s ease;
+  transition: background-color 0.4s, color 0.4s;
 }
 
 main {
@@ -101,7 +101,7 @@ main {
   right: 0;
   border-radius: 50px;
   opacity: 1;
-  transition: all 0.4s ease;
+  transition: background-color 0.4s, color 0.4s;
   z-index: 1;
 }
 
@@ -111,7 +111,7 @@ main {
   width: 17px;
   margin: 5px;
   border-radius: 50px;
-  transition: all 0.4s ease;
+  transition: background-color 0.4s, color 0.4s;
 }
 
 #calculator .header .theme label input[id="2"]:checked + .toggle .toggle-btn {
@@ -126,7 +126,7 @@ main {
   text-align: right;
   border-radius: 10px;
   background: #182034;
-  transition: all 0.4s ease;
+  transition: background-color 0.4s, color 0.4s;
 }
 @media (max-width: 750px) {
   .output {
@@ -157,7 +157,7 @@ main {
   padding: 40px 30px;
   border-radius: 10px;
   background: #232c43;
-  transition: all 0.4s ease;
+  transition: background-color 0.4s, color 0.4s;
 }
 @media (max-width: 750px) {
   .calculator-grid {
@@ -181,7 +181,7 @@ main {
   color: #444b5a;
   box-shadow: 0 4px #b4a597;
   cursor: pointer;
-  transition: all 0.4s ease;
+  transition: background-color 0.4s, color 0.4s;
 }
 @media (max-width: 750px) {
   .calculator-grid .btn {
